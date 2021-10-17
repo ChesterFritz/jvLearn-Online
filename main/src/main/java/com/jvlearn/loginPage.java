@@ -4,27 +4,30 @@ import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
  //creating a class for the jframe
 class Frame extends JFrame{
-    
+
+   //creating elements for login screen
+   public JLabel title = new JLabel("jvLearn-Online");
+   public JLabel usrLabel = new JLabel("username");
+   public JLabel passLabel = new JLabel("password");
+   public  JPanel panel = new JPanel();
+   public  JTextField usr = new JTextField();
+   public  JPasswordField pass = new JPasswordField();
+   public  JButton loginButton = new JButton("Login");
+
+
     public Frame(){
     setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-
-    //creating elements for login screen
-    JLabel title = new JLabel("jvLearn-Online");
-    JLabel usrLabel = new JLabel("username");
-    JLabel passLabel = new JLabel("password");
-    JPanel panel = new JPanel();
-    JTextField usr = new JTextField();
-    JPasswordField pass = new JPasswordField();
-    JButton loginButton = new JButton("Login");
-
-    
     //creating bounds(e.g size, position on the panel)
     title.setBounds(30, 100, 300, 30);
     usrLabel.setBounds(50,175,200,30);
@@ -60,7 +63,19 @@ class Frame extends JFrame{
     panel.add(passLabel);
     panel.add(loginButton);
     this.add(panel);
- 
-    }
-}
 
+
+
+
+//Action events begins here :DD
+
+
+    loginButton.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent e){
+            JOptionPane.showMessageDialog(null,"You clicked!");
+        }});
+
+    }
+
+
+}
