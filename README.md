@@ -7,3 +7,6 @@
 ```
 -after cloning the repository  you can open it with the directory that you have set for your git repositories.
 
+```
+the main java file is at jvLearn-Online/main/src/main/java/com/jvlearn/main.java
+```
